@@ -1,3 +1,5 @@
-Component ticker {
+Component counter {
+    func myFunc() {
+
+    }
 }
->#< error

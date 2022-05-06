@@ -132,6 +132,12 @@ bool Lexer::consumeToken(Token& t) {
     char c = next();
 
     switch (c) {
+        case '(':
+            t.type = TOKEN_LEFT_PARENTHESIS;
+            break;
+        case ')':
+            t.type = TOKEN_RIGHT_PARENTHESIS;
+            break;
         case '{':
             t.type = TOKEN_LEFT_BRACE;
             break;
