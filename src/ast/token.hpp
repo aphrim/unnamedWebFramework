@@ -50,8 +50,8 @@ typedef enum {
     //
 
     TOKEN_EQUAL_EQUAL,
-    TOKEN_GREATER, TOKEN_GREATER_EQUAL,
-    TOKEN_LESS, TOKEN_LESS_EQUAL,
+    TOKEN_GREATER_EQUAL,
+    TOKEN_LESS_EQUAL,
 
     //
 
@@ -61,6 +61,7 @@ typedef enum {
 
     //
 
+    TOKEN_NONE,
     TOKEN_IMPORT,
     TOKEN_RETURN,
     TOKEN_ERROR,
@@ -118,9 +119,7 @@ typedef struct {
             case TOKEN_MODULO: return "TOKEN_MODULO";
 
             case TOKEN_EQUAL_EQUAL: return "TOKEN_EQUAL_EQUAL";
-            case TOKEN_GREATER: return "TOKEN_GREATER";
             case TOKEN_GREATER_EQUAL: return "TOKEN_GREATER_EQUAL";
-            case TOKEN_LESS: return "TOKEN_LESS";
             case TOKEN_LESS_EQUAL: return "TOKEN_LESS_EQUAL";
 
             case TOKEN_VARIABLE: return "TOKEN_VARIABLE";

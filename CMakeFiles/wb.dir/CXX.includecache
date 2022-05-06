@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lain/Code/unnamedWebFramework/src/ast/lex.cpp
+lex.hpp
+/home/lain/Code/unnamedWebFramework/src/ast/lex.hpp
+
+/home/lain/Code/unnamedWebFramework/src/ast/lex.hpp
+vector
+-
+string
+-
+iostream
+-
+token.hpp
+/home/lain/Code/unnamedWebFramework/src/ast/token.hpp
+
+/home/lain/Code/unnamedWebFramework/src/ast/token.hpp
+string
+-
+
