@@ -1,3 +1,0 @@
-/home/lain/Code/webFramework/CMakeFiles/rebuild_cache.dir
-/home/lain/Code/webFramework/CMakeFiles/edit_cache.dir
-/home/lain/Code/webFramework/CMakeFiles/wb.dir

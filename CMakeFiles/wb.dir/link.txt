@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++17  -rdynamic CMakeFiles/wb.dir/src/ast/lex.cpp.o CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o CMakeFiles/wb.dir/src/main.cpp.o  -o wb 
