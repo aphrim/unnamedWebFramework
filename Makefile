@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lain/Code/unnamedWebFramework
+CMAKE_SOURCE_DIR = /home/lain/Code/webFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lain/Code/unnamedWebFramework
+CMAKE_BINARY_DIR = /home/lain/Code/webFramework
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lain/Code/unnamedWebFramework/CMakeFiles /home/lain/Code/unnamedWebFramework/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lain/Code/webFramework/CMakeFiles /home/lain/Code/webFramework/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lain/Code/unnamedWebFramework/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lain/Code/webFramework/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -107,7 +107,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/lain/Code/unnamedWebFramework/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/lain/Code/webFramework/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -151,6 +151,33 @@ src/ast/lex.cpp.s:
 	$(MAKE) -f CMakeFiles/wb.dir/build.make CMakeFiles/wb.dir/src/ast/lex.cpp.s
 .PHONY : src/ast/lex.cpp.s
 
+src/ast/preprocessor.o: src/ast/preprocessor.cpp.o
+
+.PHONY : src/ast/preprocessor.o
+
+# target to build an object file
+src/ast/preprocessor.cpp.o:
+	$(MAKE) -f CMakeFiles/wb.dir/build.make CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o
+.PHONY : src/ast/preprocessor.cpp.o
+
+src/ast/preprocessor.i: src/ast/preprocessor.cpp.i
+
+.PHONY : src/ast/preprocessor.i
+
+# target to preprocess a source file
+src/ast/preprocessor.cpp.i:
+	$(MAKE) -f CMakeFiles/wb.dir/build.make CMakeFiles/wb.dir/src/ast/preprocessor.cpp.i
+.PHONY : src/ast/preprocessor.cpp.i
+
+src/ast/preprocessor.s: src/ast/preprocessor.cpp.s
+
+.PHONY : src/ast/preprocessor.s
+
+# target to generate assembly for a file
+src/ast/preprocessor.cpp.s:
+	$(MAKE) -f CMakeFiles/wb.dir/build.make CMakeFiles/wb.dir/src/ast/preprocessor.cpp.s
+.PHONY : src/ast/preprocessor.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -190,6 +217,9 @@ help:
 	@echo "... src/ast/lex.o"
 	@echo "... src/ast/lex.i"
 	@echo "... src/ast/lex.s"
+	@echo "... src/ast/preprocessor.o"
+	@echo "... src/ast/preprocessor.i"
+	@echo "... src/ast/preprocessor.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -204,7 +234,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/lain/Code/unnamedWebFramework/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/lain/Code/webFramework/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

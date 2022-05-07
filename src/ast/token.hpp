@@ -62,7 +62,6 @@ typedef enum {
     //
 
     TOKEN_NONE,
-    TOKEN_IMPORT,
     TOKEN_RETURN,
     TOKEN_ERROR,
     TOKEN_EOF,
@@ -126,10 +125,11 @@ typedef struct {
             case TOKEN_NUMBER: return "TOKEN_NUMBER";
             case TOKEN_STRING: return "TOKEN_STRING";
 
-            case TOKEN_IMPORT: return "TOKEN_IMPORT";
             case TOKEN_RETURN: return "TOKEN_RETURN";
+            case TOKEN_NONE: return "TOKEN_NONE";
             case TOKEN_ERROR: return "TOKEN_ERROR";
             case TOKEN_EOF: return "TOKEN_EOF";
+            default: return "UNKNOWN TOKEN";
         }
     }
 } Token;

@@ -1,6 +1,8 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <math.h>
+#include <fstream>
 
 #include "token.hpp"
 
@@ -9,7 +11,7 @@ using namespace std;
 class Lexer {
 
 public:
-    Lexer(std::string& code);
+    Lexer(string code, string filePath);
 
     vector<Token> lex();
 
@@ -18,7 +20,8 @@ private:
     int m_line;
     int m_indexInLine; //Index within current line
     long int m_index; //Incase the code is greater than 2^31 characters. I hope that this never happens.
-    string& m_code;
+    string m_code;
+    string m_filePath;
 
     char peek();
     char peek(int offset);

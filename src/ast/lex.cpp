@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Lexer::Lexer(std::string& code) : m_code(code) {
+Lexer::Lexer(string code, string filePath) : m_filePath(filePath), m_code(code) {
     m_line = 1;
     m_indexInLine = 0;
     m_index = 0;
@@ -10,17 +10,23 @@ Lexer::Lexer(std::string& code) : m_code(code) {
 
 void Lexer::throwError(string error) {
     string positionalErrorData;
-    cout << "Error on line " << m_line << " at index " << m_indexInLine - 1 << ": \n" << error << endl;
+    cout << m_filePath << ": Error on line " << m_line << " at index " << m_indexInLine - 1 << ": \n" << error << endl;
 
     for (int i = 0; i < m_indexInLine + 10; i++) {
         char c = peek(i - m_indexInLine + 1);
         if (c == '\n' || c == '\0') break;
+
+        if (i == m_indexInLine - 2) positionalErrorData += "\x1B[31m";
+        else positionalErrorData += "\033[0m";
+
         positionalErrorData += c;
     }
-    cout << positionalErrorData << endl;
+    cout << m_line << "| " << positionalErrorData << endl;
 
+    for (int i = 0; i <= log10(m_line); i++) cout << " ";
+    cout << "| ";
     for (int i = 0; i < m_indexInLine - 2; i++) cout << " ";
-    cout << "^" << std::endl;
+    cout << "^ \033[0m" << std::endl;
 
     exit(1);
 }
@@ -79,10 +85,12 @@ string Lexer::getVariable() {
 
 string Lexer::getString() {
     string ret;
+    char c;
     while (true) {
-        char c = peek();
+        c = peek();
         if (c == '\0') throwError("Unterminated string");
-        if (c == '"' && peek(-1) != '\\') break;
+        if (c == '\n') m_line++;
+        if (c == '"' && peek(-1) != '\\') { next(); break; }
         if (c == '\\' && peek(-1) != '\\') { next(); continue; }
         ret.push_back(c);
         next();
@@ -198,12 +206,20 @@ bool Lexer::consumeToken(Token& t) {
             break;
         case '/':
             t.type = TOKEN_DIVIDE;
+            if (isStringMatch("//")) skipLine();
+            t.type = TOKEN_NONE;
+            return true;
         case '*':
             t.type = TOKEN_MULTIPLY;
             break;
         case '%':
             t.type = TOKEN_MODULO;
             break;
+
+        case '#':
+            skipLine();
+            t.type = TOKEN_NONE;
+            return true;
 
         case 'C':
             if (isStringMatch("Component")) { t.type = TOKEN_COMPONENT_DEF; break; }
@@ -221,6 +237,7 @@ bool Lexer::consumeToken(Token& t) {
             if (isStringMatch("or")) { t.type = TOKEN_OR; break; }
         case 'n':
             if (isStringMatch("not")) { t.type = TOKEN_NOT; break; }
+
         case '\0':
             t.type = TOKEN_EOF;
     }
@@ -247,13 +264,15 @@ bool Lexer::consumeToken(Token& t) {
 }
 
 vector<Token> Lexer::lex() {
+    cout << endl << m_filePath << ": " << endl;
     vector<Token> ret;
     Token consumed;
     consumeToken(consumed);
 
     while (consumed.type != TOKEN_EOF) {
         cout << consumed.typeStr() << endl;
-        ret.push_back(consumed);
+        if (consumed.type != TOKEN_NONE) 
+            ret.push_back(consumed);
         consumeToken(consumed);
     }
 

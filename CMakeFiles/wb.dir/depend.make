@@ -5,7 +5,11 @@ CMakeFiles/wb.dir/src/ast/lex.cpp.o: src/ast/lex.cpp
 CMakeFiles/wb.dir/src/ast/lex.cpp.o: src/ast/lex.hpp
 CMakeFiles/wb.dir/src/ast/lex.cpp.o: src/ast/token.hpp
 
+CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o: src/ast/preprocessor.cpp
+CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o: src/ast/preprocessor.hpp
+
 CMakeFiles/wb.dir/src/main.cpp.o: src/ast/lex.hpp
+CMakeFiles/wb.dir/src/main.cpp.o: src/ast/preprocessor.hpp
 CMakeFiles/wb.dir/src/main.cpp.o: src/ast/token.hpp
 CMakeFiles/wb.dir/src/main.cpp.o: src/main.cpp
 

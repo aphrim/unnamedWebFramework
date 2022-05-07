@@ -1,0 +1,4 @@
+func hehe {
+    b = 10@;
+    doMoreStuff(b);
+}

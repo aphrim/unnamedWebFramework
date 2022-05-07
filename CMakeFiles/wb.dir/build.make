@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lain/Code/unnamedWebFramework
+CMAKE_SOURCE_DIR = /home/lain/Code/webFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lain/Code/unnamedWebFramework
+CMAKE_BINARY_DIR = /home/lain/Code/webFramework
 
 # Include any dependencies generated for this target.
 include CMakeFiles/wb.dir/depend.make
@@ -59,43 +59,58 @@ include CMakeFiles/wb.dir/flags.make
 
 CMakeFiles/wb.dir/src/ast/lex.cpp.o: CMakeFiles/wb.dir/flags.make
 CMakeFiles/wb.dir/src/ast/lex.cpp.o: src/ast/lex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lain/Code/unnamedWebFramework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/wb.dir/src/ast/lex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wb.dir/src/ast/lex.cpp.o -c /home/lain/Code/unnamedWebFramework/src/ast/lex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lain/Code/webFramework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/wb.dir/src/ast/lex.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wb.dir/src/ast/lex.cpp.o -c /home/lain/Code/webFramework/src/ast/lex.cpp
 
 CMakeFiles/wb.dir/src/ast/lex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wb.dir/src/ast/lex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lain/Code/unnamedWebFramework/src/ast/lex.cpp > CMakeFiles/wb.dir/src/ast/lex.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lain/Code/webFramework/src/ast/lex.cpp > CMakeFiles/wb.dir/src/ast/lex.cpp.i
 
 CMakeFiles/wb.dir/src/ast/lex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wb.dir/src/ast/lex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lain/Code/unnamedWebFramework/src/ast/lex.cpp -o CMakeFiles/wb.dir/src/ast/lex.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lain/Code/webFramework/src/ast/lex.cpp -o CMakeFiles/wb.dir/src/ast/lex.cpp.s
+
+CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o: CMakeFiles/wb.dir/flags.make
+CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o: src/ast/preprocessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lain/Code/webFramework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o -c /home/lain/Code/webFramework/src/ast/preprocessor.cpp
+
+CMakeFiles/wb.dir/src/ast/preprocessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wb.dir/src/ast/preprocessor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lain/Code/webFramework/src/ast/preprocessor.cpp > CMakeFiles/wb.dir/src/ast/preprocessor.cpp.i
+
+CMakeFiles/wb.dir/src/ast/preprocessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wb.dir/src/ast/preprocessor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lain/Code/webFramework/src/ast/preprocessor.cpp -o CMakeFiles/wb.dir/src/ast/preprocessor.cpp.s
 
 CMakeFiles/wb.dir/src/main.cpp.o: CMakeFiles/wb.dir/flags.make
 CMakeFiles/wb.dir/src/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lain/Code/unnamedWebFramework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wb.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wb.dir/src/main.cpp.o -c /home/lain/Code/unnamedWebFramework/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lain/Code/webFramework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/wb.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wb.dir/src/main.cpp.o -c /home/lain/Code/webFramework/src/main.cpp
 
 CMakeFiles/wb.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wb.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lain/Code/unnamedWebFramework/src/main.cpp > CMakeFiles/wb.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lain/Code/webFramework/src/main.cpp > CMakeFiles/wb.dir/src/main.cpp.i
 
 CMakeFiles/wb.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wb.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lain/Code/unnamedWebFramework/src/main.cpp -o CMakeFiles/wb.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lain/Code/webFramework/src/main.cpp -o CMakeFiles/wb.dir/src/main.cpp.s
 
 # Object files for target wb
 wb_OBJECTS = \
 "CMakeFiles/wb.dir/src/ast/lex.cpp.o" \
+"CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o" \
 "CMakeFiles/wb.dir/src/main.cpp.o"
 
 # External object files for target wb
 wb_EXTERNAL_OBJECTS =
 
 wb: CMakeFiles/wb.dir/src/ast/lex.cpp.o
+wb: CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o
 wb: CMakeFiles/wb.dir/src/main.cpp.o
 wb: CMakeFiles/wb.dir/build.make
 wb: CMakeFiles/wb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lain/Code/unnamedWebFramework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable wb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lain/Code/webFramework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable wb"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +123,6 @@ CMakeFiles/wb.dir/clean:
 .PHONY : CMakeFiles/wb.dir/clean
 
 CMakeFiles/wb.dir/depend:
-	cd /home/lain/Code/unnamedWebFramework && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lain/Code/unnamedWebFramework /home/lain/Code/unnamedWebFramework /home/lain/Code/unnamedWebFramework /home/lain/Code/unnamedWebFramework /home/lain/Code/unnamedWebFramework/CMakeFiles/wb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lain/Code/webFramework && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lain/Code/webFramework /home/lain/Code/webFramework /home/lain/Code/webFramework /home/lain/Code/webFramework /home/lain/Code/webFramework/CMakeFiles/wb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/wb.dir/depend
 

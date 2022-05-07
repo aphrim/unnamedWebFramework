@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wb.dir/src/ast/lex.cpp.o"
+  "CMakeFiles/wb.dir/src/ast/preprocessor.cpp.o"
   "CMakeFiles/wb.dir/src/main.cpp.o"
   "wb"
   "wb.pdb"

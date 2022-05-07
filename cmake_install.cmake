@@ -1,4 +1,4 @@
-# Install script for directory: /home/lain/Code/unnamedWebFramework
+# Install script for directory: /home/lain/Code/webFramework
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lain/Code/unnamedWebFramework/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lain/Code/webFramework/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

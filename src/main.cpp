@@ -1,18 +1,25 @@
 #include <fstream> 
+#include <map>
+#include <string>
 
 #include "ast/lex.hpp"
+#include "ast/preprocessor.hpp"
 
 using namespace std;
 
 void compileFile(char* path) {
-    ifstream file;
-    file.open(path, ios::in);
-    string chunk, data;
-    while (getline(file, chunk)) data += chunk + '\n';
-    file.close();
 
-    Lexer lexer = Lexer(data);
-    lexer.lex();
+    map<string, string>* includedFiles = new map<string, string>();
+    PreProcessor preprocessor = PreProcessor(path, includedFiles);
+    preprocessor.process();
+
+    vector<Token> lexedCode;
+
+    for (auto it : *includedFiles) {
+        Lexer lexer = Lexer(it.second, it.first);
+        vector<Token> fileLexed = lexer.lex();
+        lexedCode.insert(lexedCode.begin(), fileLexed.begin(), fileLexed.end());
+    }
 }
 
 int main(int argc, char** argv) {

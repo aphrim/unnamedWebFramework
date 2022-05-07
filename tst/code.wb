@@ -1,0 +1,10 @@
+#import other/code2.wb
+
+Component ticker {
+    func myFunc() {
+        doStuff();
+    }
+}
+
+print("My string");
+
