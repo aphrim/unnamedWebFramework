@@ -169,6 +169,9 @@ bool Lexer::consumeToken(Token& t) {
         case '$':
             t.type = TOKEN_DOLLAR_SIGN;
             break;
+        case ',':
+            t.type = TOKEN_COMMA;
+            break;
         case ';':
             t.type = TOKEN_SEMICOLON;
             break;
