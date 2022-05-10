@@ -10,7 +10,7 @@ TokenData - Struct for storing data about a token
 Token - Stores type of token (TokenType), and data of token (TokenData)
  */
 
-
+#pragma once
 
 #include <string>
 

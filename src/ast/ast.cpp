@@ -75,12 +75,22 @@ sR getFunctionDef(int index) {
         index += 2;
         while (true) {
             sR stmt = getStmt(index);
-            ret.stmt.arguments.push_back(stmt.stmt);
             index = newIndex;
-            StmtType argBackT = stmt.stmt.type;
-            if (!(argBackT == STMT_FUNCTION_CALL || argBackT == STMT_VARIABLE
-                    || argBackT == STMT_STRING || argBackT == STMT_EXPR || argBackT == STMT_HTML))
+            StmtType argT = stmt.stmt.type;
+            if (argT == STMT_TOKEN && stmt.stmt.token.type == TOKEN_RIGHT_PARENTHESIS) break;
+            if (!(argT == STMT_FUNCTION_CALL || argT == STMT_VARIABLE
+                    || argT == STMT_STRING || argT == STMT_EXPR || argT == STMT_HTML))
                 throwError("Invalid Function Argument", index);
+            ret.stmt.arguments.push_back(stmt.stmt);
+            sR next = getStmt(++index);
+            if (next.stmt.type != STMT_TOKEN)
+                throwError("',' or ')' expected");
+            if (next.stmt.token.type == TOKEN_RIGHT_PARENTHESIS)
+                break;
         }
+        pair<vector<Stmt*> int> body = getBody(++index);
+        ret.body = body.first.
+        ret.newIndex = body.second;
+        return ret;
     } else throwError("Invalid Function Definition.", index);
 }

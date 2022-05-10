@@ -6,6 +6,8 @@
 
 #include "token.hpp"
 
+#pragma once
+
 using namespace std;
 
 class Lexer {

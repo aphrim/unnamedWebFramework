@@ -10,6 +10,8 @@
 #include <iostream>
 #include <filesystem>
 
+#pragma once
+
 using namespace std;
 namespace fs = filesystem;
 

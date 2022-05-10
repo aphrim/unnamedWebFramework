@@ -4,6 +4,10 @@
 #include <utility>
 #include <iostream>
 
+#include "token.hpp"
+
+#pragma once
+
 using namespace std;
 
 //Very simple for now.
@@ -14,6 +18,7 @@ typedef enum {
     STMT_FUNCTION_CALL, STMT_ASSIGNMENT,
     STMT_VARIABLE, STMT_STRING,
     STMT_EXPR,
+    STMT_TOKEN,
     STMT_RETURN, STMT_HTML,
 } StmtType;
 
@@ -64,6 +69,10 @@ typedef struct StmtExpr : public Stmt {
     vector<Token> body;
 }
 
+typedef struct StmtToken : public Stmt {
+    Token token;
+}
+
 typedef struct StmtReturn : public Stmt {
     StmtType type = STMT_RETURN;
     Stmt expr;
@@ -75,6 +84,7 @@ typedef struct StmtHtml : public Stmt {
     map<string, string> props;
     vector<StmtHtml> children; 
 }
+
 
 class ASTGenerator {
 public:
